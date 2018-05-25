@@ -1,5 +1,6 @@
 @import "vars"
 @import "fonts"
+@import "_mixins/before"
 @import "libs"
 
 
@@ -30,8 +31,36 @@ body
 
 .tabs 
 	width: 100%
-		
-
+	padding-top: 26px
+	padding-bottom: 35px
+	display: flex
+	justify-content: center
+	.tab-left, .tab-right 
+		width: 200px
+		height: 70px
+		border-radius: 0 15px 0 0
+		background-image: linear-gradient(to top, rgba(0, 0, 0, 0.77) 0%, #323131 100%)	
+		margin-right: 5px
+		color: #cecece
+		font-size: 18px
+		font-weight: 700
+		line-height: 70px
+		cursor: pointer
+		text-align: center
+	.tab-left
+		border-radius:  15px 0 0 0
+	.active 
+		background: $accent
+		color: #000000
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			width: 200px
+			height: 1px
+			background-color: #f6b300
+			left: 0
+			bottom: -6px
 
 
 
