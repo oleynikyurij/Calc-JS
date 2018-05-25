@@ -4,14 +4,14 @@
 <head>
 
 	<meta charset="utf-8">
-	
+
 
 	<title>Калькулятор на JavaScript</title>
 	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	
+
 
 	<link rel="stylesheet" href="css/main.min.css">
 
@@ -22,18 +22,49 @@
 	<div class="calc">
 		<div class="tabs">
 			<div class="tab-left active">
-					Лэндинг
-					
+				Лэндинг
 			</div>
 			<div class="tab-right">
 				Многостраничник
 			</div>
 		</div>
+		<div class="blocks" id="blocks-block">
+			<div class="blocks-title">Количество блоков</div>
+			<input type="number" class="counter" id="counter-block">
+		</div>
+		<div class="blocks" id="pages-block">
+			<div class="blocks-title">Количество страниц</div>
+			<input type="number" class="counter" id="counter-pages">
+		</div>
+		<div class="blocks">
+			<div class="blocks-title">Количество часов на проект</div>
+			<input type="number" class="counter" id="counter-hours">
+		</div>
+		<div class="blocks" >
+			<div class="blocks-title">Стоимость вашего часа</div>
+			<input type="number" class="counter" id="counter-rate">
+		</div>
+		<div class="addiction">
+			<div class="addiction-title">Дополнительно</div>
+			<div class="addiction-block">
+				<input type="checkbox" class="checkbox"  id="changes-check">
+				Возможность редактировать текст на сайте
+			</div>
+			<div class="addiction-block">
+				<input type="checkbox" class="checkbox"  id="changes-cms">
+				Установка на CMS
+			</div>
+		</div>
+		<div class="total">
+			Общая Стоимость
+			<input type="text" value="5000" class="total-count"  id="total-value">
+		</div>
 	</div>
 
-	
+
 
 	<script src="js/scripts.min.js"></script>
 
 </body>
+
 </html>

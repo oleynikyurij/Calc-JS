@@ -1,7 +1,7 @@
 @import "vars"
 @import "fonts"
 @import "_mixins/before"
-@import "libs"
+// @import "libs"
 
 
 * 
@@ -62,6 +62,73 @@ body
 			left: 0
 			bottom: -6px
 
+.counter
+	width: 132px
+	height: 60px
+	border: 3px solid rgba(239, 174,2, 0.6)
+	background-color: transparent
+	text-align: center
+	color: $accent
+	font-size: 48px
+	font-weight: 700
 
 
-@import "media" // Always at the end
+	
+	
+
+.blocks 
+	width: 65%
+	margin-bottom: 30px
+	display: flex
+	justify-content: space-between
+	align-items: center
+	&-title 
+		position: relative
+		color: #ffffff
+		font-size: 30px
+		font-weight: 700
+		line-height: 72px
+		letter-spacing: -0.3px
+		@include before
+
+#pages-block 
+	display: none
+
+.addiction
+	font-size: 30px
+	font-weight: 700
+	color: $accent
+	&-title 
+		text-align: center
+	&-block 
+		text-align: left
+		input[type="checkbox"]
+			width: 24px
+			height: 24px
+			opacity: .5
+
+.total
+	width: 60%
+	display: flex
+	justify-content: space-between
+	align-items: center
+	margin-top: 60px
+	margin-bottom: 30px
+	color: #fff
+	font-size: 36px
+	font-weight: 700
+	&-count 
+		width: 200px
+		height: 60px
+		background-color: transparent
+		font-size: 56px
+		font-weight: 700
+		border: none
+		color: $accent
+		text-align: right
+
+
+
+
+
+// @import "media" // Always at the end
