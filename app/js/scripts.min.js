@@ -78,4 +78,64 @@ const landingPrice = 5000,
 
 
 		});
+
+		counterBlock.addEventListener('change', () => {
+			counterHours.value = '';
+			counterRate.value = '';
+			
+			totalPrice = counterBlock.value * blocksPrice;
+			totalValue.value = totalPrice;
+		});
+
+		counterPages.addEventListener('change', () => {
+			counterHours.value = '';
+			counterRate.value = '';
+			
+			totalPrice = counterPages.value * pagesPrice;
+			totalValue.value = totalPrice;
+		});
+
+		counterHours.addEventListener('change', () => {
+			counterBlock.value = '';
+			counterPages.value = '';
+			totalPrice = 0;
+			time = 0;
+			time = counterHours.value;
+			hourRate = time * counterRate.value;
+			totalValue.value = hourRate;
+			totalPrice = hourRate;
+		});
+
+		counterRate.addEventListener('change', () => {
+			counterBlock.value = '';
+			counterPages.value = '';
+			totalPrice = 0;
+			hourRate = time * counterRate.value;
+			totalValue.value = hourRate;
+			totalPrice = hourRate;
+		});
+
+		changesCheck.addEventListener('change', () => {
+			if (changesCheck.checked) {
+			 totalPrice = totalPrice + changesSite;
+			 totalValue.value = totalPrice;
+			} else {
+				totalPrice = totalPrice - changesSite;
+			  totalValue.value = totalPrice;
+			};
+		});
+
+		changesCMS.addEventListener('change', () => {
+			if (changesCMS.checked) {
+				totalPrice = totalPrice + cmsPrice;
+			 totalValue.value = totalPrice;
+			} else {
+				totalPrice = totalPrice - cmsPrice;
+			 totalValue.value = totalPrice;
+			};
+		});
+
+
+
+
 	});
